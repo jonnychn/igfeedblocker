@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Feed Blocker",
+  "version": "1.0",
+  "description": "Blocks the Instagram feed until you solve a math challenge.",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage"]
+}
